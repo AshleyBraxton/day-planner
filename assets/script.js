@@ -11,8 +11,6 @@ setInterval(displayTime, 1000);
 function savePlans() {
 var plans = $(this).siblings('.description').val()
 var blockHour = $(this).parent().attr('id');
-console.log(plans);
-console.log(blockHour)
 localStorage.setItem(blockHour , plans);
 };
 $("#9 .description").val(localStorage.getItem("9"));
