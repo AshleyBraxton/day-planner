@@ -27,7 +27,6 @@ $("#17 .description").val(localStorage.getItem("17"));
 // ^^displays the text content from the local storage in the time blocks, allowing the 'plans' to persist even if page is refreshed 
 // grabs the current hour and the hour of each time block. Then these two values are compared to see if the time block is past future or current. give the block the corresponding class to style it 
 var currentHour = dayjs().hour();
-console.log(currentHour);
 function checktime() {
 $('.time-block').each(function() {
   var blockHour = $(this).attr('id');
