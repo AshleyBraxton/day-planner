@@ -2,7 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
-
+/* ^^sets the body font and fontsize  */
 textarea {
   background: transparent;
   border: none;
@@ -11,40 +11,40 @@ textarea {
   border-left: 1px solid black;
   padding: 10px;
 }
-
+/* ^^makes the text area background transparent, takes away the borders and then adds a left border makes the font color black  */
 .description {
   white-space: pre-wrap;
 }
-
+/* ^^sets the white space to pre-wrap preserving sequences of white space  */
 .time-block {
   border-radius: 15px;
 }
-
+/* ^^rounds the corners of the time blocks  */
 .row {
   border-top: 1px solid white;
 }
-
+/* ^^gives each row a top border  */
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
 }
-
+/* ^^sets a dashed top border on the block that displays the hour, makes the text black */
 .past {
   background-color: #d3d3d3;
   color: white;
 }
-
+/* ^^sets all past time blocks to display with a gray background */
 .present {
   background-color: #ff6961;
   color: white;
 }
-
+/* ^^sets the present hour time block to display with a red background */
 .future {
   background-color: #77dd77;
   color: white;
 }
-
+/* ^^styles all future time blocks with a green background */
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -52,8 +52,9 @@ textarea {
   background-color: #06aed5;
   color: white;
 }
-
+/*^^ styles the save button to have a blue background, with a black border and rounds the two right corners  */
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+/* ^^fades the color of the save button icon when hovered  */

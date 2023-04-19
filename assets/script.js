@@ -6,9 +6,8 @@ var dateDisplay = document.getElementById('currentDay')
 
 }
 setInterval(displayTime, 1000);
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+// ^^gets the current date and formats it to display on the top of the pageXOffset, updates every 1 second to keep it updated 
+// Takes the text from the time blocks and commits them to the local storage when the user hits the save button 
 function savePlans() {
 var plans = $(this).siblings('.description').val()
 var blockHour = $(this).parent().attr('id');
@@ -25,7 +24,8 @@ $("#14 .description").val(localStorage.getItem("14"));
 $("#15 .description").val(localStorage.getItem("15"));
 $("#16 .description").val(localStorage.getItem("16"));
 $("#17 .description").val(localStorage.getItem("17"));
-
+// ^^displays the text content from the local storage in the time blocks, allowing the 'plans' to persist even if page is refreshed 
+// grabs the current hour and the hour of each time block. Then these two values are compared to see if the time block is past future or current. give the block the corresponding class to style it 
 var currentHour = dayjs().hour();
 console.log(currentHour);
 function checktime() {
@@ -39,11 +39,10 @@ $('.time-block').each(function() {
     $(this).addClass('past').removeClass('present future')
     
   }
-  console.log(blockHour)
 });
 
 }
- 
+//  gives the save buttons an event listener so that they will save data to local storage when clicked
 var saveBtn = document.getElementsByClassName('saveBtn')
 $(saveBtn).on('click', savePlans)
 checktime();
